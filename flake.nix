@@ -15,28 +15,30 @@
         };
         # List your desired packages here
         myPackages = with pkgs; [
+          # Core utilities
           git
           curl
           htop
+
+          # Development
           vscode
-          rPackages.vivaldi
+
+          # Security & sync
           keepassxc
           syncthing
           syncthingtray
+
+          # Communication
           element-desktop
-          flameshot
-          signal-desktop
-          steam
-          lutris
-          heroic
-          prismlauncher
-          mangohud
-          gamemode
-          bottles
+          telegram-desktop
           discord
           teamspeak_client
-          obs-studio
-          vkbasalt
+          thunderbird
+
+          # Browsers
+          firefox
+
+          # Productivity & creative
           obsidian
           kdePackages.ghostwriter
           xournalpp
@@ -45,12 +47,26 @@
           gimp
           inkscape
           blender
-          telegram-desktop
-          firefox
-          thunderbird
           audacity
-          intiface-central
+          kdePackages.kdenlive
+          vlc
+          pinta
+
+          # Gaming
+          steam
+          lutris
+          heroic
+          prismlauncher
+          mangohud
+          gamemode
+          bottles
+          obs-studio
+          vkbasalt
+          superTuxKart
+          minetest
           itch
+
+          # Fun/whimsical
           sl
           cowsay
           fortune
@@ -64,11 +80,8 @@
           oneko
           rig
           figlet
-          kdePackages.kdenlive
-          vlc
-          pinta
-          superTuxKart
-          minetest
+
+          # Art & education
           aseprite
           tuxpaint
           drawpile
@@ -83,12 +96,21 @@
           element-web
           cheese
           simplescreenrecorder
+
+          # Special interest
+          intiface-central
+
+          # Utilities
+          flameshot
+          signal-desktop
         ];
       in {
         packages.myPackages = pkgs.buildEnv {
           name = "my-profile";
           paths = myPackages;
         };
+        # Provide a default package for convenience
+        packages.default = self.packages.${system}.myPackages;
       }
     );
 }
