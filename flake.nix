@@ -55,7 +55,6 @@
           superTuxKart
           minetest
           aseprite
-          medibangpaint
           tuxpaint
           drawpile
           mypaint
@@ -67,7 +66,6 @@
           filezilla
           mumble
           element-web
-          gnome-paint
           cheese
           simplescreenrecorder
         ];
