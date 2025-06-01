@@ -36,7 +36,9 @@
           thunderbird
 
           # Browsers
-          rPackages.vivaldi
+          # vivaldi is not in nixpkgs; install via Flatpak:
+          # This will auto-install Vivaldi if flatpak is available and not already installed.
+          # To enable, run: nix run .#installVivaldiFlatpak
 
           # Productivity & creative
           obsidian
@@ -111,6 +113,28 @@
         };
         # Provide a default package for convenience
         packages.default = self.packages.${system}.myPackages;
+
+        # Add a custom flake output to automate Vivaldi Flatpak installation
+        apps.installVivaldiFlatpak = {
+          type = "app";
+          program =
+            let
+              script = ''
+                #!/usr/bin/env bash
+                if ! command -v flatpak >/dev/null; then
+                  echo "Flatpak is not installed. Please install flatpak first." >&2
+                  exit 1
+                fi
+                if flatpak list | grep -q com.vivaldi.Vivaldi; then
+                  echo "Vivaldi is already installed via Flatpak."
+                else
+                  echo "Installing Vivaldi via Flatpak..."
+                  flatpak install -y flathub com.vivaldi.Vivaldi
+                fi
+              '';
+            in
+              pkgs.writeShellScriptBin "install-vivaldi-flatpak" script;
+        };
       }
     );
 }
