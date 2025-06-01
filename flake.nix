@@ -125,6 +125,11 @@
                   echo "Flatpak is not installed. Please install flatpak first." >&2
                   exit 1
                 fi
+                # Add Flathub if not present
+                if ! flatpak remote-list | grep -q flathub; then
+                  echo "Adding Flathub remote..."
+                  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+                fi
                 if flatpak list | grep -q com.vivaldi.Vivaldi; then
                   echo "Vivaldi is already installed via Flatpak."
                 else
@@ -133,7 +138,7 @@
                 fi
               '';
             in
-              pkgs.writeShellScriptBin "install-vivaldi-flatpak" script;
+              "${pkgs.writeShellScriptBin "install-vivaldi-flatpak" script}/bin/install-vivaldi-flatpak";
         };
       }
     );
