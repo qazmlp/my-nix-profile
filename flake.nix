@@ -50,6 +50,21 @@
           thunderbird
           audacity
           intiface-central
+          itch
+          sl
+          cowsay
+          fortune
+          nyancat
+          toilet
+          bb
+          cmatrix
+          lolcat
+          asciiquarium
+          ponysay
+          oneko
+          xeyes
+          rig
+          figlet
           kdePackages.kdenlive
           vlc
           pinta
