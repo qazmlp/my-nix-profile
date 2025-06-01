@@ -49,6 +49,7 @@
           firefox
           thunderbird
           audacity
+          intiface-central
           kdePackages.kdenlive
           vlc
           pinta
