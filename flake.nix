@@ -19,7 +19,7 @@
           curl
           htop
           vscode
-          vivaldi
+          rPackages.vivaldi
           keepassxc
           syncthing
           syncthingtray
