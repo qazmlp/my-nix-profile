@@ -38,6 +38,19 @@
           ghostwriter
           xournalpp
           focuswriter
+          krita
+          gimp
+          inkscape
+          blender
+          telegram-desktop
+          firefox
+          thunderbird
+          audacity
+          kdenlive
+          vlc
+          pinta
+          superTuxKart
+          minetest
         ];
       in {
         packages.default = pkgs.buildEnv {
