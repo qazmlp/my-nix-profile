@@ -69,7 +69,7 @@
           simplescreenrecorder
         ];
       in {
-        packages.default = pkgs.buildEnv {
+        packages.myPackages = pkgs.buildEnv {
           name = "my-profile";
           paths = myPackages;
         };
