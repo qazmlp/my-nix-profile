@@ -36,7 +36,7 @@
           thunderbird
 
           # Browsers
-          firefox
+          rPackages.vivaldi
 
           # Productivity & creative
           obsidian
