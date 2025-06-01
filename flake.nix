@@ -51,6 +51,22 @@
           pinta
           superTuxKart
           minetest
+          aseprite
+          medibangpaint
+          tuxpaint
+          drawpile
+          mypaint
+          shotcut
+          handbrake
+          gthumb
+          feh
+          qbittorrent
+          filezilla
+          mumble
+          element-web
+          gnome-paint
+          cheese
+          simplescreenrecorder
         ];
       in {
         packages.default = pkgs.buildEnv {
