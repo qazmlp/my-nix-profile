@@ -49,7 +49,7 @@
           firefox
           thunderbird
           audacity
-          kdenlive
+          kdePackages.kdenlive
           vlc
           pinta
           superTuxKart
