@@ -38,7 +38,7 @@
           obs-studio
           vkbasalt
           obsidian
-          ghostwriter
+          kdePackages.ghostwriter
           xournalpp
           focuswriter
           krita
