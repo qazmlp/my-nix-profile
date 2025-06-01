@@ -62,7 +62,6 @@
           asciiquarium
           ponysay
           oneko
-          xeyes
           rig
           figlet
           kdePackages.kdenlive
