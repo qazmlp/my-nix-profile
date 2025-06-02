@@ -44,6 +44,12 @@
           boost
           fmt
 
+          # Interactive Fiction development
+          inform7
+          frotz  # Z-machine interpreter
+          twine  # HTML-based interactive fiction
+          ink  # narrative scripting language
+
           # Security & sync
           keepassxc
           syncthing
