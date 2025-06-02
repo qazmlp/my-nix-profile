@@ -22,6 +22,27 @@
 
           # Development
           vscode
+          # Rust development
+          rustup
+          cargo-edit  # adds cargo add/rm/upgrade commands
+          cargo-watch # for watch-and-rebuild workflow
+          cargo-audit # for security audits
+          cargo-expand # for macro expansion
+          cargo-flamegraph # for performance profiling
+          cargo-outdated # for dependency checking
+          pkg-config
+          openssl
+          # C++ development
+          clang
+          clang-tools  # includes clang-format, clang-tidy, etc.
+          cmake
+          ninja
+          gdb
+          lldb
+          bear  # for generating compilation database
+          ccache  # for faster rebuilds
+          boost
+          fmt
 
           # Security & sync
           keepassxc
